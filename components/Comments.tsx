@@ -132,7 +132,7 @@ export default function Comments({ courseSlug, courseTitle }: CommentsProps) {
                 <img
                   src={issue.user.avatar_url}
                   alt={issue.user.login}
-                  className="w-5 h-5 rounded-full"
+                  className="w-4 h-4 rounded-full"
                 />
                 <span className="text-sm font-medium text-gray-900">
                   {issue.user.login}
