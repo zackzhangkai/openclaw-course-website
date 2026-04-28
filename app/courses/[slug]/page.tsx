@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { getAllCourses, getCourseBySlug } from '@/lib/courses'
 import { MDXRemote } from 'next-mdx-remote/rsc'
 import Comments from '@/components/Comments'
+import { ProgressButton } from '@/components/ProgressBar'
 
 interface PageProps {
   params: { slug: string }
@@ -51,7 +52,10 @@ export default function CoursePage({ params }: PageProps) {
       </Link>
 
       <article className="prose prose-lg max-w-none bg-white rounded-xl p-8 shadow-sm border">
-        <h1 className="text-3xl font-bold text-gray-900 mb-2">{course.title}</h1>
+        <div className="flex items-center justify-between mb-4">
+          <h1 className="text-3xl font-bold text-gray-900 mb-0">{course.title}</h1>
+          <ProgressButton courseSlug={params.slug} />
+        </div>
         <div className="h-1 w-20 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full mb-8"></div>
         <MDXRemote source={course.content} />
       </article>
@@ -74,7 +78,7 @@ export default function CoursePage({ params }: PageProps) {
             >
               下一节：{nextCourse.title.replace(/^Lesson \d+:\s*/, '')}
               <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7 7-7" />
               </svg>
             </Link>
           )}
