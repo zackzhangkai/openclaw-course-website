@@ -7,7 +7,9 @@
 
 ## 核心概念
 
-```
+![OpenClaw 架构图](/docs/openclaw-architecture.png)
+
+> 架构图源文件：`docs/openclaw-architecture.drawio`（可用 draw.io 编辑）
 ┌─────────────────────────────────────────────────────────┐
 │                    OpenClaw 架构                      │
 ├─────────────────────────────────────────────────────────┤

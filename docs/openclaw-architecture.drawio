@@ -1,0 +1,142 @@
+<mxfile host="app.diagrams.net" modified="2026-04-28T05:34:00.000Z" agent="Draw.io" version="24.1.0">
+  <diagram name="OpenClaw 架构" id="architecture">
+    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- 标题 -->
+        <mxCell id="title" value="OpenClaw 架构" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="600" y="20" width="400" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- 用户层 -->
+        <mxCell id="user-layer-box" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1f5fe;strokeColor=#0288d1;verticalAlign=top;align=center;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="200" y="80" width="1200" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="user-layer-text" value="用户层 (User Layer)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="200" y="90" width="1200" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- 渠道图标 -->
+        <mxCell id="feishu" value="飞书" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="300" y="140" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="telegram" value="Telegram" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="480" y="140" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wechat" value="微信" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="660" y="140" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="more-channels" value="..." style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20" vertex="1" parent="1">
+          <mxGeometry x="840" y="150" width="60" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- 渠道层 -->
+        <mxCell id="channel-layer-box" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#f57c00;verticalAlign=top;align=center;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="200" y="280" width="1200" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="channel-layer-text" value="渠道层 (Channel Layer) - Plugin 机制" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="200" y="290" width="1200" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- 渠道 Plugin -->
+        <mxCell id="plugin-feishu" value="飞书 Plugin" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="300" y="340" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="plugin-telegram" value="Telegram Plugin" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="480" y="340" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="plugin-wechat" value="微信 Plugin" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="660" y="340" width="120" height="50" as="geometry" />
+        </mxCell>
+        
+        <!-- 连接线：用户层到渠道层 -->
+        <mxCell id="edge1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#0288d1;strokeWidth=2;" edge="1" parent="1" source="feishu" target="plugin-feishu">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#0288d1;strokeWidth=2;" edge="1" parent="1" source="telegram" target="plugin-telegram">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#0288d1;strokeWidth=2;" edge="1" parent="1" source="wechat" target="plugin-wechat">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- 代理层 -->
+        <mxCell id="agent-layer-box" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e8f5e9;strokeColor=#388e3c;verticalAlign=top;align=center;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="200" y="480" width="1200" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="agent-layer-text" value="代理层 (Agent Proxy)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="200" y="490" width="1200" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Agent 实例 -->
+        <mxCell id="agent-main" value="Agent&#xa;main" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="320" y="540" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="agent-2" value="Agent&#xa;agent-2" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="480" y="540" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="agent-custom" value="Agent&#xa;custom" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="640" y="540" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="agent-more" value="..." style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20" vertex="1" parent="1">
+          <mxGeometry x="800" y="550" width="60" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- 连接线：渠道层到代理层 -->
+        <mxCell id="edge4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;entryX=0.3;entryY=0;strokeColor=#f57c00;strokeWidth=2;" edge="1" parent="1" source="plugin-feishu" target="agent-main">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#f57c00;strokeWidth=2;" edge="1" parent="1" source="plugin-telegram" target="agent-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;entryX=0.7;entryY=0;strokeColor=#f57c00;strokeWidth=2;" edge="1" parent="1" source="plugin-wechat" target="agent-custom">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- 工具层 -->
+        <mxCell id="tool-layer-box" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fce4ec;strokeColor=#c2185b;verticalAlign=top;align=center;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="200" y="680" width="1200" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="tool-layer-text" value="工具层 (Tool Layer)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="200" y="690" width="1200" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- 工具 -->
+        <mxCell id="tool-read" value="read" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="300" y="740" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tool-write" value="write" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="440" y="740" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tool-bash" value="bash" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="580" y="740" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="tool-mcp" value="MCP Servers" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="720" y="740" width="120" height="50" as="geometry" />
+        </mxCell>
+        
+        <!-- 连接线：代理层到工具层 -->
+        <mxCell id="edge7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;entryX=0.3;entryY=0;strokeColor=#388e3c;strokeWidth=2;" edge="1" parent="1" source="agent-main" target="tool-read">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;strokeColor=#388e3c;strokeWidth=2;" edge="1" parent="1" source="agent-2" target="tool-write">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;entryX=0.7;entryY=0;strokeColor=#388e3c;strokeWidth=2;" edge="1" parent="1" source="agent-custom" target="tool-bash">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- Skill 层（横向说明） -->
+        <mxCell id="skill-note" value="Skills 技能模块可插拔，MCP 工具协议可扩展" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fffde7;strokeColor=#f9a825;align=center;verticalAlign=middle;fontSize=12;fontStyle=2;dashed=1" vertex="1" parent="1">
+          <mxGeometry x="900" y="400" width="280" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow-to-skill" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;strokeColor=#f9a825;strokeWidth=2;dashed=1;" edge="1" parent="1" source="agent-main" target="skill-note">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
