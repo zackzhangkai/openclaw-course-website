@@ -137,11 +137,11 @@ openclaw chat
 
 ## 课后作业
 
-1. [ ] 完成 OpenClaw 安装
-2. [ ] 运行 `openclaw doctor` 通过所有检查
-3. [ ] 找到并阅读你的 `openclaw.json` 配置文件
-4. [ ] 配置一个免费模型提供商
-5. [ ] 成功运行 `openclaw chat` 并完成一次对话
+1. - [ ] 完成 OpenClaw 安装
+2. - [ ] 运行 `openclaw doctor` 通过所有检查
+3. - [ ] 找到并阅读你的 `openclaw.json` 配置文件
+4. - [ ] 配置一个免费模型提供商
+5. - [ ] 成功运行 `openclaw chat` 并完成一次对话
 
 ---
 

@@ -14,8 +14,18 @@ export function generateStaticParams() {
   }))
 }
 
+function getNextCourse(currentSlug: string) {
+  const courses = getAllCourses()
+  const currentIndex = courses.findIndex(c => c.slug === currentSlug)
+  if (currentIndex >= 0 && currentIndex < courses.length - 1) {
+    return courses[currentIndex + 1]
+  }
+  return null
+}
+
 export default function CoursePage({ params }: PageProps) {
   const course = getCourseBySlug(params.slug)
+  const nextCourse = getNextCourse(params.slug)
 
   if (!course) {
     return (
@@ -56,6 +66,21 @@ export default function CoursePage({ params }: PageProps) {
           >
             ← 返回课程列表
           </Link>
+
+          {nextCourse && (
+            <Link
+              href={`/courses/${nextCourse.slug}`}
+              className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
+            >
+              下一节：{nextCourse.title.replace(/^Lesson \d+:\s*/, '')}
+              <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
+          )}
+        </div>
+
+        <div className="mt-4 text-center">
           <a
             href="https://github.com/zackzhangkai/openclaw-course-website"
             target="_blank"
