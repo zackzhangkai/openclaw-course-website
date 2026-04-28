@@ -53,6 +53,7 @@ export default function RootLayout({
                 <div className="bg-white p-3 rounded-lg border shadow-sm inline-block">
                   <img src="/images/donation-qr.png" alt="赞赏码" className="w-32 h-32 object-contain" />
                 </div>
+                <p className="text-xs text-gray-500 mt-2">创作不易，请作者喝杯咖啡</p>
               </div>
               <div className="text-center">
                 <h3 className="text-sm font-semibold text-gray-700 mb-3">个人微信</h3>
