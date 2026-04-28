@@ -46,8 +46,24 @@ export default function RootLayout({
         </nav>
         <main>{children}</main>
         <footer className="bg-gray-50 border-t mt-16">
-          <div className="max-w-5xl mx-auto px-4 py-8 text-center text-gray-500 text-sm">
-            © 2026 OpenClaw Training Team
+          <div className="max-w-5xl mx-auto px-4 py-8">
+            <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-6">
+              <div className="text-center">
+                <h3 className="text-sm font-semibold text-gray-700 mb-3">赞赏支持</h3>
+                <div className="bg-white p-3 rounded-lg border shadow-sm inline-block">
+                  <img src="/images/donation-qr.png" alt="赞赏码" className="w-32 h-32 object-contain" />
+                </div>
+              </div>
+              <div className="text-center">
+                <h3 className="text-sm font-semibold text-gray-700 mb-3">个人微信</h3>
+                <div className="bg-white p-3 rounded-lg border shadow-sm inline-block">
+                  <img src="/images/wechat-qr.png" alt="个人微信二维码" className="w-32 h-auto object-contain" />
+                </div>
+              </div>
+            </div>
+            <div className="text-center text-gray-500 text-sm">
+              © 2026 OpenClaw Training Team
+            </div>
           </div>
         </footer>
       </body>
