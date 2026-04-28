@@ -7,14 +7,14 @@
 
 ## 核心概念
 
-![OpenClaw 架构图](/docs/openclaw-architecture.png)
+![OpenClaw 架构图](/images/openclaw-architecture.png)
 
-> 架构图源文件：`docs/openclaw-architecture.drawio`（可用 draw.io 编辑）
+> 架构图源文件：`/docs/openclaw-architecture.drawio`（可用 draw.io 编辑）
 
 **核心概念说明：**
 
 | 概念 | 说明 |
-|------|------|
+|--------|------|
 | **Agent** | AI 代理实例，拥有独立的 workspace、memory、配置 |
 | **Channel** | 接入渠道（飞书、Telegram、微信等） |
 | **Plugin** | 渠道插件，实现 Channel 协议 |
