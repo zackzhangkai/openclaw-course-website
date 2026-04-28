@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { getAllCourses, getCourseBySlug } from '@/lib/courses'
 import { MDXRemote } from 'next-mdx-remote/rsc'
+import Comments from '@/components/Comments'
 
 interface PageProps {
   params: { slug: string }
@@ -45,7 +46,9 @@ export default function CoursePage({ params }: PageProps) {
         <MDXRemote source={course.content} />
       </article>
 
-      <div className="mt-12 pt-8 border-t">
+      <Comments courseSlug={course.slug} courseTitle={course.title} />
+
+      <div className="mt-8 pt-8 border-t">
         <div className="flex justify-between items-center">
           <Link
             href="/"
@@ -53,6 +56,14 @@ export default function CoursePage({ params }: PageProps) {
           >
             ← 返回课程列表
           </Link>
+          <a
+            href="https://github.com/zackzhangkai/openclaw-course-website"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm text-gray-500 hover:text-gray-700"
+          >
+            在 GitHub 上查看源码 →
+          </a>
         </div>
       </div>
     </div>
