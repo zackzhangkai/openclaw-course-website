@@ -59,6 +59,14 @@ export default function RootLayout({
                 <div className="bg-white p-3 rounded-lg border shadow-sm inline-block">
                   <img src="/images/wechat-qr.png" alt="个人微信二维码" className="w-32 h-auto object-contain" />
                 </div>
+                <p className="text-xs text-gray-500 mt-2">加入群聊请添加个人微信</p>
+              </div>
+              <div className="text-center">
+                <h3 className="text-sm font-semibold text-gray-700 mb-3">技术自留地</h3>
+                <div className="bg-white p-3 rounded-lg border shadow-sm inline-block">
+                  <img src="/images/official-account-qr.png" alt="技术自留地公众号" className="w-32 h-32 object-contain" />
+                </div>
+                <p className="text-xs text-gray-500 mt-2">扫码关注公众号</p>
               </div>
             </div>
             <div className="text-center text-gray-500 text-sm">
